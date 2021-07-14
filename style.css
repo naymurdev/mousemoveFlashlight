@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Cosi Azure Black Stencil';
+  src: url('./fonts/Cosi Azure Black Stencil.eot');
+  src: url('./fonts/Cosi Azure Black Stencil.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/Cosi Azure Black Stencil.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    color: black;
+    font-family: 'Cosi Azure Black Stencil';
+  }
+  
+
+  #cursor {
+    background-color:  cyan;
+    height: 350px;
+    width:350px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    transform: translate(-100px,-100px);
+    filter:blur(10px)
+   
+  }
+  
+  
+  h1 {
+    font-size: 110px;
+    padding: 2.5rem;
+    text-align: center;
+    margin-top:150px;
+    text-shadow: 2px 2px 8px black;
+  }
+  
+  .text-con {
+     mix-blend-mode: darken;
+  }
