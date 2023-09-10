@@ -1,45 +1,48 @@
 @font-face {
-  font-family: 'Cosi Azure Black Stencil';
-  src: url('./fonts/Cosi Azure Black Stencil.eot');
-  src: url('./fonts/Cosi Azure Black Stencil.eot?#iefix') format('embedded-opentype'),
-       url('./fonts/Cosi Azure Black Stencil.woff2') format('woff2');
+  font-family: "Cosi Azure Black Stencil";
+  src: url("./fonts/Cosi Azure Black Stencil.eot");
+  src: url("./fonts/Cosi Azure Black Stencil.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Cosi Azure Black Stencil.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
-
-
 body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: black;
-    color: black;
-    font-family: 'Cosi Azure Black Stencil';
-  }
-  
+  font-family: "Cosi Azure Black Stencil";
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
-  #cursor {
-    background-color:  cyan;
-    height: 350px;
-    width:350px;
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    transform: translate(-100px,-100px);
-    filter:blur(10px)
-   
-  }
-  
-  
-  h1 {
-    font-size: 110px;
-    padding: 2.5rem;
-    text-align: center;
-    margin-top:150px;
-    text-shadow: 2px 2px 8px black;
-  }
-  
-  .text-con {
-     mix-blend-mode: darken;
-  }
+body[data-flmode="true"] {
+  background-color: black;
+  color: black;
+  cursor: crosshair;
+}
+
+#cursor {
+  --flashlight-width: 350px;
+  height: var(--flashlight-width);
+  width: var(--flashlight-width);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  transform: translate(calc(0px - var(--flashlight-width) / 2), calc(0px - var(--flashlight-width) / 2));
+  filter: blur(10px);
+}
+
+body[data-flmode="true"] #cursor {
+  background-color: cyan;
+}
+
+h1 {
+  font-size: 110px;
+  padding: 2.5rem;
+  text-align: center;
+  margin-top: 150px;
+  text-shadow: 2px 2px 8px black;
+}
+
+.text-con {
+  mix-blend-mode: darken;
+}
